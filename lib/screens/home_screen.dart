@@ -71,14 +71,14 @@ class _HomeScreenState extends State<HomeScreen> {
       updatedAt: DateTime.now().subtract(const Duration(days: 1)),
     ),
   ];
-
+// add new not pop up
   void _showAddNoteDialog() {
     showDialog(
-      context: context,
+      context: context,//pop up
       builder: (context) => AlertDialog(
         title: const Text('Yeni Not'),
         content: const Column(
-          mainAxisSize: MainAxisSize.min,
+          mainAxisSize: MainAxisSize.min,//max children widget size
           children: [
             TextField(
               decoration: InputDecoration(
@@ -99,17 +99,17 @@ class _HomeScreenState extends State<HomeScreen> {
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(context),
-            child: const Text('İptal'),
+            child: const Text('İptal'),//cancel
           ),
           FilledButton(
             onPressed: () => Navigator.pop(context),
-            child: const Text('Kaydet'),
+            child: const Text('Kaydet'),//save
           ),
         ],
       ),
     );
   }
-
+//add folder
   void _showAddFolderDialog() {
     showDialog(
       context: context,
@@ -124,11 +124,11 @@ class _HomeScreenState extends State<HomeScreen> {
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(context),
-            child: const Text('İptal'),
+            child: const Text('İptal'),//cancel
           ),
           FilledButton(
             onPressed: () => Navigator.pop(context),
-            child: const Text('Oluştur'),
+            child: const Text('Oluştur'),//
           ),
         ],
       ),
