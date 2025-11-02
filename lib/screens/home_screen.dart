@@ -5,6 +5,9 @@ import '../widgets/folder_card.dart';
 import '../models/note.dart';
 import '../models/folder.dart';
 
+import 'folder_detail_screen.dart';
+import 'note_editor_screen.dart';
+
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
